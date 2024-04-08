@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WoofIT Pet Store</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Swiper CSS for testimonials slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body class="bg-gray-100">
+
+<header class="bg-white py-4 shadow-md sticky top-0 bg-opacity-95 z-50">
+    <nav class="container mx-auto flex justify-between items-center">
+        <a href="/" class="text-3xl font-bold text-gray-800">WoofIT</a>
+        <div class="space-x-4">
+            <a href="/about" class="text-gray-600 hover:text-gray-800 hover:underline">About Us</a>
+            <a href="/services" class="text-gray-600 hover:text-gray-800 hover:underline">Services</a>
+            <a href="/blog" class="text-gray-600 hover:text-gray-800 hover:underline">Blog</a>
+            <a href="/contact" class="text-gray-600 hover:text-gray-800 hover:underline">Contact Us</a>
+        </div>
+    </nav>
+</header>
+
+<section class="text-center py-16 bg-gray-200">
+    <div class="container mx-auto">
+        <h1 class="text-5xl font-bold text-gray-800 mb-4">Pet Store & Beyond</h1>
+        <p class="text-xl text-gray-600 mb-8">Keep your pets looking and feeling their best with our range of grooming supplies.</p>
+        <a href="#" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition-colors">Get Started</a>
+    </div>
+</section>
+
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Only the best for your Dog!</h2>
+        <div class="flex flex-wrap justify-center">
+            <img src="https://i.ibb.co/crPLCjq/K4-IIn-ZE-4h7-ZKIr-L754m2-convert-io-1.jpg" alt="Dog Wear" class="max-w-sm rounded-lg shadow-md m-4">
+            <p class="text-gray-600 w-full text-center mt-4">Our grooming services ensure your dog is always looking sharp.</p>
+        </div>
+    </div>
+</section>
+
+<section class="container mx-auto px-4 py-16">
+    <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Services</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <i class="fas fa-bone fa-3x text-black mb-4"></i>
+            <h4 class="font-bold text-lg mb-2">Best Quality Pet Food</h4>
+            <p class="text-gray-600">Nutritious, delicious, and vet-approved selections for every dietary need.</p>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <i class="fas fa-paw fa-3x text-black mb-4"></i>
+            <h4 class="font-bold text-lg mb-2">Toys & Accessories</h4>
+            <p class="text-gray-600">From fun to functional, everything your pet needs to stay happy and active.</p>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <i class="fas fa-stethoscope fa-3x text-black mb-4"></i>
+            <h4 class="font-bold text-lg mb-2">Pets Medical Care</h4>
+            <p class="text-gray-600">Comprehensive wellness plans for every stage of your pet's life.</p>
+        </div>
+        <div class="bg-white p-4 shadow-lg rounded-lg">
+            <i class="fas fa-cut fa-3x text-black mb-4"></i>
+            <h4 class="font-bold text-lg mb-2">Full Service Grooming</h4>
+            <p class="text-gray-600">Expert grooming services to keep your pet looking their best.</p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-gray-200 py-16">
+    <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Thank you pet parents for loving us</h3>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <p class="text-gray-600 italic">"Fantastic products that our furry friends love! High-quality and durable."</p>
+                    <p>- John Doe</p>
+                </div>
+                <div class="swiper-slide">
+                    <p class="text-gray-600 italic">"Their customer service is unmatched. Highly recommend!"</p>
+                    <p>- Jane Smith</p>
+                </div>
+                <!-- More slides can be added here -->
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<section class="py-16">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap -mx-4">
+            <div class="w-full lg:w-1/2 px-4 mb-4 lg:mb-0">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Have a question or need assistance?</h3>
+                <form action="#" method="POST" class="space-y-4">
+                    <input type="text" placeholder="First Name" class="form-input w-full p-2 border-2 border-gray-300 rounded focus:border-blue-500 focus:outline-none">
+                    <input type="text" placeholder="Last Name" class="form-input w-full p-2 border-2 border-gray-300 rounded focus:border-blue-500 focus:outline-none">
+                    <textarea placeholder="Message" class="form-textarea w-full p-2 border-2 border-gray-300 rounded focus:border-blue-500 focus:outline-none" rows="4"></textarea>
+                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send Message</button>
+                </form>
+            </div>
+            <div class="w-full lg:w-1/2 px-4">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Visit Us</h3>
+                <p class="text-gray-600 mb-4">123 Pet Street, Happy Town, 45678</p>
+                <p class="text-gray-600 mb-4">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                <p class="text-gray-600">Sat - Sun: Closed</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-white py-8">
+    <div class="container mx-auto text-center">
+        <p class="text-gray-600">© 2024 WoofIT Pet Store. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Swiper JS for testimonials slider -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+    var swiper = new Swiper('.mySwiper', {
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
+
+</body>
+</html>
