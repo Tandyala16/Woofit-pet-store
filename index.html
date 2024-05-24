@@ -6,126 +6,186 @@
     <title>WoofIT Pet Store</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Swiper CSS for testimonials slider -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <style>
+        .swiper-pagination-bullet-active { background-color: #4a5568; }
+        .highlight { background-color: #edf2f7; }
+        #chat-box {
+            bottom: 60px;
+            right: 20px;
+            display: none; /* Changed from flex to none */
+            flex-direction: column;
+            max-height: 400px;
+            transition: transform 0.3s ease;
+            position: fixed;
+            z-index: 1000;
+        }
+    </style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-50 font-sans leading-normal tracking-normal">
 
-<header class="bg-white py-4 shadow-md sticky top-0 bg-opacity-95 z-50">
-    <nav class="container mx-auto flex justify-between items-center">
-        <a href="/" class="text-3xl font-bold text-gray-800">WoofIT</a>
-        <div class="space-x-4">
-            <a href="/about" class="text-gray-600 hover:text-gray-800 hover:underline">About Us</a>
-            <a href="/services" class="text-gray-600 hover:text-gray-800 hover:underline">Services</a>
-            <a href="/blog" class="text-gray-600 hover:text-gray-800 hover:underline">Blog</a>
-            <a href="/contact" class="text-gray-600 hover:text-gray-800 hover:underline">Contact Us</a>
+<header class="bg-white py-4 shadow-lg sticky top-0 z-50">
+    <nav class="container mx-auto flex justify-between items-center px-6">
+        <a href="/" class="text-4xl font-bold text-indigo-600">WoofIT</a>
+        <div class="hidden md:flex space-x-4">
+            <a href="/about" class="text-gray-700 hover:text-indigo-600">About Us</a>
+            <a href="/services" class="text-gray-700 hover:text-indigo-600">Services</a>
+            <a href="/blog" class="text-gray-700 hover:text-indigo-600">Blog</a>
+            <a href="/contact" class="text-gray-700 hover:text-indigo-600">Contact Us</a>
         </div>
     </nav>
 </header>
 
-<section class="text-center py-16 bg-gray-200">
-    <div class="container mx-auto">
-        <h1 class="text-5xl font-bold text-gray-800 mb-4">Pet Store & Beyond</h1>
-        <p class="text-xl text-gray-600 mb-8">Keep your pets looking and feeling their best with our range of grooming supplies.</p>
-        <a href="#" class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition-colors">Get Started</a>
-    </div>
-</section>
+<main>
+    <section class="text-center py-12 bg-indigo-100">
+        <div class="container mx-auto">
+            <h1 class="text-5xl font-bold text-gray-800 mb-4">Pet Store & Beyond</h1>
+            <p class="text-lg text-gray-600 mb-8">Explore our premium services and products to keep your pets happy and healthy.</p>
+            <a href="#" class="bg-indigo-500 text-white font-bold py-2 px-4 rounded hover:bg-indigo-600 transition-colors">Discover More</a>
+        </div>
+    </section>
 
-<section class="py-16">
-    <div class="container mx-auto px-4">
-        <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Only the best for your Dog!</h2>
-        <div class="flex flex-wrap justify-center">
-            <img src="https://i.ibb.co/crPLCjq/K4-IIn-ZE-4h7-ZKIr-L754m2-convert-io-1.jpg" alt="Dog Wear" class="max-w-sm rounded-lg shadow-md m-4">
-            <p class="text-gray-600 w-full text-center mt-4">Our grooming services ensure your dog is always looking sharp.</p>
-        </div>
-    </div>
-</section>
-
-<section class="container mx-auto px-4 py-16">
-    <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Services</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="bg-white p-4 shadow-lg rounded-lg">
-            <i class="fas fa-bone fa-3x text-black mb-4"></i>
-            <h4 class="font-bold text-lg mb-2">Best Quality Pet Food</h4>
-            <p class="text-gray-600">Nutritious, delicious, and vet-approved selections for every dietary need.</p>
-        </div>
-        <div class="bg-white p-4 shadow-lg rounded-lg">
-            <i class="fas fa-paw fa-3x text-black mb-4"></i>
-            <h4 class="font-bold text-lg mb-2">Toys & Accessories</h4>
-            <p class="text-gray-600">From fun to functional, everything your pet needs to stay happy and active.</p>
-        </div>
-        <div class="bg-white p-4 shadow-lg rounded-lg">
-            <i class="fas fa-stethoscope fa-3x text-black mb-4"></i>
-            <h4 class="font-bold text-lg mb-2">Pets Medical Care</h4>
-            <p class="text-gray-600">Comprehensive wellness plans for every stage of your pet's life.</p>
-        </div>
-        <div class="bg-white p-4 shadow-lg rounded-lg">
-            <i class="fas fa-cut fa-3x text-black mb-4"></i>
-            <h4 class="font-bold text-lg mb-2">Full Service Grooming</h4>
-            <p class="text-gray-600">Expert grooming services to keep your pet looking their best.</p>
-        </div>
-    </div>
-</section>
-
-<section class="bg-gray-200 py-16">
-    <div class="container mx-auto px-4">
-        <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Thank you pet parents for loving us</h3>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    <p class="text-gray-600 italic">"Fantastic products that our furry friends love! High-quality and durable."</p>
-                    <p>- John Doe</p>
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Featured Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="bg-white p-6 shadow-lg rounded-lg">
+                    <img src="https://i.ibb.co/Z1XK4ZD/dog-food.jpg" alt="Premium Dog Food" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-lg font-bold text-gray-800">Premium Dog Food</h3>
+                    <p class="text-gray-600">High-quality ingredients for a balanced diet.</p>
                 </div>
-                <div class="swiper-slide">
-                    <p class="text-gray-600 italic">"Their customer service is unmatched. Highly recommend!"</p>
-                    <p>- Jane Smith</p>
+                <div class="bg-white p-6 shadow-lg rounded-lg">
+                    <img src="https://i.ibb.co/5v2rc7z/cat-toys.jpg" alt="Cat Toys" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-lg font-bold text-gray-800">Fun Cat Toys</h3>
+                    <p class="text-gray-600">Keep your cat entertained with our range of fun toys.</p>
                 </div>
-                <!-- More slides can be added here -->
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </div>
-</section>
-
-<section class="py-16">
-    <div class="container mx-auto px-4">
-        <div class="flex flex-wrap -mx-4">
-            <div class="w-full lg:w-1/2 px-4 mb-4 lg:mb-0">
-                <h3 class="text-3xl font-bold text-gray-800 mb-4">Have a question or need assistance?</h3>
-                <form action="#" method="POST" class="space-y-4">
-                    <input type="text" placeholder="First Name" class="form-input w-full p-2 border-2 border-gray-300 rounded focus:border-blue-500 focus:outline-none">
-                    <input type="text" placeholder="Last Name" class="form-input w-full p-2 border-2 border-gray-300 rounded focus:border-blue-500 focus:outline-none">
-                    <textarea placeholder="Message" class="form-textarea w-full p-2 border-2 border-gray-300 rounded focus:border-blue-500 focus:outline-none" rows="4"></textarea>
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Send Message</button>
-                </form>
-            </div>
-            <div class="w-full lg:w-1/2 px-4">
-                <h3 class="text-3xl font-bold text-gray-800 mb-4">Visit Us</h3>
-                <p class="text-gray-600 mb-4">123 Pet Street, Happy Town, 45678</p>
-                <p class="text-gray-600 mb-4">Mon - Fri: 9:00 AM - 6:00 PM</p>
-                <p class="text-gray-600">Sat - Sun: Closed</p>
+                <div class="bg-white p-6 shadow-lg rounded-lg">
+                    <img src="https://i.ibb.co/YTjW3vF/pet-grooming.jpg" alt="Pet Grooming Kit" class="w-full h-40 object-cover rounded-lg mb-4">
+                    <h3 class="text-lg font-bold text-gray-800">Pet Grooming Kit</h3>
+                    <p class="text-gray-600">Everything you need to keep your pet looking sharp.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<footer class="bg-white py-8">
-    <div class="container mx-auto text-center">
-        <p class="text-gray-600">© 2024 WoofIT Pet Store. All rights reserved.</p>
+    <section class="py-16 bg-indigo-100">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-8">Only the Best for Your Dog!</h2>
+            <div class="flex flex-wrap justify-center">
+                <img src="https://i.ibb.co/crPLCjq/K4-IIn-ZE-4h7-ZKIr-L754m2-convert-io-1.jpg" alt="Dog Wear" class="max-w-sm rounded-lg shadow-md m-4">
+                <p class="text-gray-600 w-full text-center mt-4">Our grooming services ensure your dog is always looking sharp.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container mx-auto px-4 py-16">
+        <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">Our Services</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="bg-white p-6 shadow-lg rounded-lg">
+                <i class="fas fa-bone fa-3x text-indigo-600 mb-4"></i>
+                <h4 class="font-bold text-lg mb-2">Best Quality Pet Food</h4>
+                <p class="text-gray-600">Nutritious, delicious, and vet-approved selections for every dietary need.</p>
+            </div>
+            <div class="bg-white p-6 shadow-lg rounded-lg">
+                <i class="fas fa-paw fa-3x text-indigo-600 mb-4"></i>
+                <h4 class="font-bold text-lg mb-2">Toys & Accessories</h4>
+                <p class="text-gray-600">From fun to functional, everything your pet needs to stay happy and active.</p>
+            </div>
+            <div class="bg-white p-6 shadow-lg rounded-lg">
+                <i class="fas fa-stethoscope fa-3x text-indigo-600 mb-4"></i>
+                <h4 class="font-bold text-lg mb-2">Pets Medical Care</h4>
+                <p class="text-gray-600">Comprehensive wellness plans for every stage of your pet's life.</p>
+            </div>
+            <div class="bg-white p-6 shadow-lg rounded-lg">
+                <i class="fas fa-cut fa-3x text-indigo-600 mb-4"></i>
+                <h4 class="font-bold text-lg mb-2">Full Service Grooming</h4>
+                <p class="text-gray-600">Expert grooming services to keep your pet looking their best.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-gray-100">
+        <div class="container mx-auto px-4">
+            <h3 class="text-3xl font-bold text-center text-gray-800 mb-8">What Our Customers Say</h3>
+            <div class="swiper mySwiper swiper-initialized swiper-horizontal swiper-backface-hidden">
+                <div class="swiper-wrapper" id="swiper-wrapper-3bead26b4e56069e" aria-live="polite">
+                    <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 3" data-swiper-slide-index="0" style="width: 324px;">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <img src="https://randomuser.me/api/portraits/men/1.jpg" class="w-12 h-12 rounded-full mr-4" alt="John Doe">
+                                <h4 class="text-lg font-bold text-gray-800">John Doe</h4>
+                            </div>
+                            <p class="text-gray-600 italic">"Fantastic products that our furry friends love! High-quality and durable."</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 3" data-swiper-slide-index="1" style="width: 324px;">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <img src="https://randomuser.me/api/portraits/women/2.jpg" class="w-12 h-12 rounded-full mr-4" alt="Jane Smith">
+                                <h4 class="text-lg font-bold text-gray-800">Jane Smith</h4>
+                            </div>
+                            <p class="text-gray-600 italic">"Their customer service is unmatched. Highly recommend!"</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" role="group" aria-label="3 / 3" data-swiper-slide-index="2" style="width: 324px;">
+                        <div class="bg-white p-8 rounded-lg shadow-lg">
+                            <div class="flex items-center mb-4">
+                                <img src="https://randomuser.me/api/portraits/men/3.jpg" class="w-12 h-12 rounded-full mr-4" alt="Michael Johnson">
+                                <h4 class="text-lg font-bold text-gray-800">Michael Johnson</h4>
+                            </div>
+                            <p class="text-gray-600 italic">"I'm blown away by the quality of their pet products. My dog loves them!"</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet" tabindex="0" role="button" aria-label="Go to slide 3"></span></div>
+                <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-indigo-100">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap -mx-4">
+                <div class="w-full lg:w-1/2 px-4 mb-4 lg:mb-0">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Have a question or need assistance?</h3>
+                    <form action="#" method="POST" class="space-y-4">
+                        <input type="text" placeholder="First Name" class="form-input w-full p-2 border-2 border-gray-300 rounded focus:border-indigo-500 focus:outline-none">
+                        <input type="text" placeholder="Last Name" class="form-input w-full p-2 border-2 border-gray-300 rounded focus:border-indigo-500 focus:outline-none">
+                        <textarea placeholder="Message" class="form-textarea w-full p-2 border-2 border-gray-300 rounded focus:border-indigo-500 focus:outline-none" rows="4"></textarea>
+                        <button type="submit" class="bg-indigo-500 hover:bg-indigo-600 text-white font-bold py-2 px-4 rounded">Send Message</button>
+                    </form>
+                </div>
+                <div class="w-full lg:w-1/2 px-4">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">Visit Us</h3>
+                    <p class="text-gray-600 mb-4">123 Pet Street, Happy Town, 45678</p>
+                    <p class="text-gray-600 mb-4">Mon - Fri: 9:00 AM - 6:00 PM</p>
+                    <p class="text-gray-600">Sat - Sun: Closed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-white py-8">
+        <div class="container mx-auto text-center">
+            <p class="text-gray-600">© 2024 WoofIT Pet Store. All rights reserved.</p>
+        </div>
+    </footer>
+    <!-- Live chat button and container -->
+    <div class="fixed bottom-4 right-4 z-50">
+        <button id="chat-toggle" class="bg-indigo-500 text-white p-3 rounded-full focus:outline-none shadow-lg transition transform hover:scale-105">
+            <i class="fas fa-comments"></i>
+        </button>
+        <div id="chat-box" class="bg-white p-4 w-64 h-96 rounded-lg border shadow-lg flex flex-col">
+            <div id="messages" class="flex-1 overflow-y-auto p-2">
+                <!-- Messages will appear here -->
+            </div>
+            <input type="text" id="chat-input" placeholder="Type a message..." class="border-2 border-gray-300 p-2 rounded focus:outline-none focus:border-indigo-500">
+        </div>
     </div>
-</footer>
+</main>
 
 <!-- Swiper JS for testimonials slider -->
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script>
-    var swiper = new Swiper('.mySwiper', {
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
-</script>
-
 </body>
 </html>
